@@ -9,12 +9,22 @@
             "settings": {
               "text": "Welcome to our store",
               "color_scheme": "accent-1",
-              "link": "shopify:\/\/collections\/frontpage"
+              "link": ""
+            }
+          },
+          "9d0e6d2f-4020-4255-9a44-7d6fc39fb285": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Welcome to our store",
+              "color_scheme": "accent-1",
+              "link": ""
             }
           }
         },
         "block_order": [
-          "announcement-bar-0"
+          "announcement-bar-0",
+          "9d0e6d2f-4020-4255-9a44-7d6fc39fb285"
         ],
         "settings": {
         }
