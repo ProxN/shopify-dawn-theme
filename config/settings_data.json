@@ -1,5 +1,7 @@
 {
   "current": {
+    "sale_badge_color_scheme": "accent-1",
+    "sold_out_badge_color_scheme": "inverse",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
