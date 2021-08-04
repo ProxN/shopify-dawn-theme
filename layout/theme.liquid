@@ -145,5 +145,9 @@
 
     <script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script>
-  </body>
+  
+<!-- **BEGIN** Hextom USB Integration // Main Include - DO NOT MODIFY -->
+    {% render 'hextom_usb_main', product: product, customer: customer %}
+    <!-- **END** Hextom USB Integration // Main Include - DO NOT MODIFY -->
+</body>
 </html>
