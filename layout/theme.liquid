@@ -104,7 +104,8 @@
     {%- endunless -%}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-  </head>
+  {{ 'daily-deals.scss' | asset_url | stylesheet_tag }}
+</head>
 
   <body>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -149,5 +150,6 @@
 <!-- **BEGIN** Hextom USB Integration // Main Include - DO NOT MODIFY -->
     {% render 'hextom_usb_main', product: product, customer: customer %}
     <!-- **END** Hextom USB Integration // Main Include - DO NOT MODIFY -->
+{% include 'daily-deals' %}
 </body>
 </html>

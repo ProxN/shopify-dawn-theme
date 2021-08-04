@@ -1,0 +1,346 @@
+/*===== DAILY DEALS ====*/
+.daily-deals-title {
+  color: #21293c;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.daily-deals-date-box {
+  width: 100%;
+  height: 53px;
+  padding: 0;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+.daily-deals-date-box div {
+  background-color: #333333;
+}
+.daily-deals-date-box div {
+  border-radius: 0;
+}
+.daily-deals-date-box>div:first-child {
+  margin-left: 0;
+}
+.daily-deals-date-box div {
+  width: 66px;
+  padding: 9px 0;
+  border-radius: 0;
+  background-color: #333333;
+}
+.daily-deals-date-box>div {
+  display: block;
+  width: 23%;
+  margin-left: 2%;
+  float: left;
+  line-height: 1.4;
+}
+.daily-deals-no {
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+}
+.daily-deals-text {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .025em;
+  text-align: center;
+  display: block;
+  text-transform: capitalize;
+}
+.daily__deals_deal_of_the_deal_box_wrapper {
+  display: flex;
+}
+
+.daily_deals__deals_box {
+  width: 80%;
+  display: flex;
+}
+
+.daily_deals__deals_box_col_image {
+  width: 40%;
+}
+
+.daily_deals__deals_box_col_price {
+  width: 60%;
+}
+
+.daily_deals__price_box_wrapper {
+  padding: 32px;
+}
+
+.daily_deals__countdown_box {
+  width: 38%;
+  background: black;
+  padding: 29px 41px 40px;
+}
+
+.daily_deals__deals_price {
+  margin-top: 45px;
+}
+
+.daily_deals__deals_price h5 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.daily_deals_price {
+  display: flex;
+  align-items: center;
+}
+
+.daily_deals__deals_price .daily_deals_price h3 {
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 47px;
+  margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.daily_deals__offers {
+  margin-bottom: 0px;
+}
+
+.daily_deals__offers p {
+  line-height: 19px;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.daily_deals__offers p.daily_deals__reg {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.daily_deals__offers p.daily_deals__reg span {
+  text-decoration: line-through;
+}
+
+.daily_deals__offers p.daily_deals__pr span {
+  font-weight: 700;
+}
+
+.daily_deals__btn-holder .daily_deals__cta {
+  margin-top: 12px;
+}
+
+.daily_deals__btn-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.daily_deals__cta-cart {
+    border: 1px solid rgba(36,36,36,0.5) !important;
+    color: rgba(36,36,36,0.5);
+    background: rgba(0,0,0,0);
+}
+
+.daily_deals__cta {
+  width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px;
+}
+
+.deal__option__select {
+    margin: 10px -7px 0;
+}
+
+.deal__option__select {
+    display: flex;
+}
+
+.deal__option__select .form__group {
+    padding: 0 7px;
+}
+
+.deal__option__select .w-50 {
+    width: 50%;
+}
+
+.form__group label {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+select.form__control {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(https://api.dailydeals.ai/public/images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 11px;
+    background-position: 92% center;
+    text-align: left;
+    text-align-last: left;
+    border: 1px solid rgba(36,36,36,0.5);
+}
+
+.form__control {
+    width: 100%;
+    height: 37px;
+    padding: 2.5px 15px;
+}
+
+.daily_deals__card-timer {
+    background: #000000;
+    padding: 31px;
+    margin-bottom: 13px;
+}
+
+.daily_deals__card-timer h2 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    max-width: 206px;
+    margin: 0 auto 22px;
+}
+
+.daily_deals__timer {
+    display: flex;
+    align-items: center;
+    margin: 0 -16px;
+    padding-left: 0px !important;
+}
+
+.daily_deals__timer li {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 16px; */
+}
+
+.daily_deals__timer li span.daily_deals__counter {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    font-size: 40px;
+    line-height: 52px;
+    margin-bottom: 6px;
+    padding: 0 10px;
+    width: 85%;
+    margin: auto;
+    max-width: 120px;
+}
+
+.daily_deals__timer li span.daily_deals__format {
+    margin-top: 4px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.daily_deals__timer li span {
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    display: block;
+}
+
+
+.daily_deals__subscribtion-card h3 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.daily_deals__subscribtion-card p {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    opacity: 0.7;
+    max-width: 289px;
+    margin: 0 auto 16px;
+}
+
+.daily_deals__form-group {
+    display: flex;
+}
+
+.daily_deals__form-group .daily_deals__form-input {
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255);
+    border: none;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 15px;
+    border-radius: 0%;
+}
+
+.daily_deals__form-group .daily_deals__btn-group button {
+    height: 50px;
+    background: #FFFFFF;
+    border: none;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+    min-width: 100px;
+    padding: 15px;
+}
+
+#countdown-text {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+@media(min-width: 1080px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+
+@media(max-width: 1080px) {
+  .daily__deals_deal_of_the_deal_box_wrapper {
+    display: block;
+  }
+
+  .daily__deals_heading {
+    text-align: center;
+  }
+
+  .daily_deals__featured_image_box {
+    text-align: center;
+  }
+
+  .daily_deals__deals_box {
+    display: block;
+    width: 100%;
+  }
+
+  .daily_deals__deals_box_col_image {
+    width: 100%;
+  }
+
+  .daily_deals__deals_box_col_price {
+    width: 100%;
+  }
+
+  .daily_deals__countdown_box {
+    width: 100%;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+}
