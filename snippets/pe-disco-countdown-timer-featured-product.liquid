@@ -1,0 +1,12 @@
+<script type="text/javascript">
+  window.pe_disco_home = {
+      featured_product: {
+          {% if product.metafields.discoapp.SaleEndsAt %}
+              {% for field in product.metafields.discoapp %}
+                  {{ field | first }}: "{{ field | last }}"
+                  {% unless forloop.last %},{% endunless %}
+              {% endfor %}
+          {% endif %}
+      }
+  }
+</script>

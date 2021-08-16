@@ -1,0 +1,37 @@
+<script type="text/javascript">
+    window.pe_disco = {
+        product: {
+            {% if product.metafields.discoapp.SaleEndsAt %}
+                {% for field in product.metafields.discoapp %}
+                    {{ field | first }}: "{{ field | last }}"
+                    {% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            {% endif %}
+        },
+        collection: {
+            {% if collection.metafields.discoapp.SaleEndsAt %}
+                {% for field in collection.metafields.discoapp %}
+                    {{ field | first }}: "{{ field | last }}"
+                    {% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            {% endif %}
+        },
+        collections: [
+            {% for coll in collections %}
+                {% if coll.metafields.discoapp.SaleEndsAt %}
+          			{
+                      collection: {{ coll.id  }},
+                      collectionUrl: "{{ coll.url }}",
+                      {% for field in coll.metafields.discoapp %}
+                          {{ field | first }}: "{{ field | last }}"
+                          {% unless forloop.last %},{% endunless %}
+                      {% endfor %}
+         			} {% unless forloop.last %},{% endunless %}
+                {% endif %}
+            {% endfor %}
+        ],
+        sales: {% if shop.metafields.discoapp.sales %} {{ shop.metafields.discoapp.sales }} {% else %} [] {% endif %},
+        myshopify_url: "{{ shop.permanent_domain }}",
+        cacheid: "{% if shop.metafields.discoapp.cacheid %}{{ shop.metafields.discoapp.cacheid }}{% endif %}"
+    };
+</script>
