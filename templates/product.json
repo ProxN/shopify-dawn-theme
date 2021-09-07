@@ -34,21 +34,6 @@
             "product": "{{product}}"
           }
         },
-        "48744899-e277-489d-a386-5a08c8b0f51b": {
-          "type": "shopify:\/\/apps\/product-review\/blocks\/product-reviews\/bb62162d-163d-45e1-b0c0-edc75cd64fbd",
-          "disabled": true,
-          "settings": {
-            "stars_fill_color": "#000000",
-            "star_size": 24,
-            "padding_x": 50,
-            "padding_y": 0,
-            "heading": "Customer Reviews",
-            "no_reviews_action_text": "Be the first to review this product.",
-            "existing_reviews_action_text": "Write Review",
-            "allow_unverified_reviews": false,
-            "product": "{{product}}"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -80,6 +65,21 @@
           "type": "share",
           "settings": {
           }
+        },
+        "48744899-e277-489d-a386-5a08c8b0f51b": {
+          "type": "shopify:\/\/apps\/product-review\/blocks\/product-reviews\/bb62162d-163d-45e1-b0c0-edc75cd64fbd",
+          "disabled": true,
+          "settings": {
+            "stars_fill_color": "#000000",
+            "star_size": 24,
+            "padding_x": 50,
+            "padding_y": 0,
+            "heading": "Customer Reviews",
+            "no_reviews_action_text": "Be the first to review this product.",
+            "existing_reviews_action_text": "Write Review",
+            "allow_unverified_reviews": false,
+            "product": "{{product}}"
+          }
         }
       },
       "block_order": [
@@ -87,13 +87,13 @@
         "title",
         "subtitle",
         "554c43ee-574f-4eff-bc7f-c765849e63cc",
-        "48744899-e277-489d-a386-5a08c8b0f51b",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "48744899-e277-489d-a386-5a08c8b0f51b"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -109,10 +109,36 @@
         "add_image_padding": false,
         "show_vendor": false
       }
+    },
+    "16310523882fa9bbaa": {
+      "type": "apps",
+      "blocks": {
+        "b556f7df-8011-49d7-a80d-f5f3a13dc016": {
+          "type": "shopify:\/\/apps\/product-review\/blocks\/product-reviews\/bb62162d-163d-45e1-b0c0-edc75cd64fbd",
+          "settings": {
+            "stars_fill_color": "#000000",
+            "star_size": 24,
+            "padding_x": 50,
+            "padding_y": 0,
+            "heading": "Customer Reviews",
+            "no_reviews_action_text": "Be the first to review this product.",
+            "existing_reviews_action_text": "Write Review",
+            "allow_unverified_reviews": true,
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "b556f7df-8011-49d7-a80d-f5f3a13dc016"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "product-recommendations"
+    "product-recommendations",
+    "16310523882fa9bbaa"
   ]
 }
