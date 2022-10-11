@@ -1,7 +1,7 @@
 <script type="text/javascript">
     window.pe_disco = {
         product: {
-            {% if product.metafields.discoapp.SaleEndsAt %}
+            {% if product.metafields.discoapp.SaleEndsAt or product.metafields.discoapp.SaleId %}
                 {% for field in product.metafields.discoapp %}
                     {{ field | first }}: "{{ field | last }}"
                     {% unless forloop.last %},{% endunless %}
@@ -9,7 +9,7 @@
             {% endif %}
         },
         collection: {
-            {% if collection.metafields.discoapp.SaleEndsAt %}
+            {% if collection.metafields.discoapp.SaleEndsAt or collection.metafields.discoapp.SaleId %}
                 {% for field in collection.metafields.discoapp %}
                     {{ field | first }}: "{{ field | last }}"
                     {% unless forloop.last %},{% endunless %}
@@ -18,7 +18,7 @@
         },
         collections: [
             {% for coll in collections %}
-                {% if coll.metafields.discoapp.SaleEndsAt %}
+                {% if coll.metafields.discoapp.SaleEndsAt or coll.metafields.discoapp.SaleId %}
           			{
                       collection: {{ coll.id  }},
                       collectionUrl: "{{ coll.url }}",
