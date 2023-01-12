@@ -1,0 +1,19 @@
+{% assign currentProductSaleId = saleId | default: product.metafields.discoapp.SaleId %}
+{% if currentProductSaleId and shop.metafields.discoapp.sales %}
+  {% assign sales = shop.metafields.discoapp.sales.value %}
+  {% for sale in sales %}
+    {% if sale.Id == currentProductSaleId %}
+      {% assign disco_sale_ends_at = sale.EndDate %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if dateFormat %}
+  {% if disco_sale_ends_at %}
+    {{ disco_sale_ends_at | date: dateFormat }}
+  {% endif %}
+{% else %}
+  {% if disco_sale_ends_at %}
+    {{ disco_sale_ends_at }}
+  {% endif %}
+{% endif %}

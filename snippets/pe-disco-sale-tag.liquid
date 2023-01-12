@@ -1,0 +1,86 @@
+<script type="text/javascript" style="display: none !important">
+  if (!window.pe_disco) {
+    window.pe_disco = {};
+  };
+  if (!window.pe_disco.collectionProducts) {
+    window.pe_disco.collectionProducts = {};
+  };
+
+  {% if product %}
+    {% if product.metafields.discoapp.SaleEndsAt or product.metafields.discoapp.SaleId %}
+      
+        window.pe_disco.collectionProducts["{{product.handle}}"] = {
+            handle: "{{ product.handle }}",
+            price: "{{ product.price }}",
+            price_min: "{{ product.price_min }}",
+            price_max: "{{ product.price_max }}",
+            price_varies: "{{ product.price_varies }}",
+            compare_at_price: "{{ product.compare_at_price }}",
+            compare_at_price_min: "{{ product.compare_at_price_min }}",
+            compare_at_price_max: "{{ product.compare_at_price_max }}",
+            compare_at_price_varies: "{{ product.compare_at_price_varies }}",
+            {% for field in product.metafields.discoapp %}
+                {{ field | first }}: "{{ field | last }}"
+                {% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        };
+    
+    {% endif %}
+  {% else %}
+    {% if paginate or paginateBy %}
+    {% assign currentPaginate = paginate %}
+    {% if currentPaginate %}
+      {% assign paginateBy = currentPaginate.page_size %}
+    {% endif %}
+      {% paginate collection.products by paginateBy %}
+        {% for product in collection.products %}
+            {% if product.metafields.discoapp.SaleEndsAt or product.metafields.discoapp.SaleId %}
+              
+                window.pe_disco.collectionProducts["{{product.handle}}"] = {
+                    handle: "{{ product.handle }}",
+                    price: "{{ product.price }}",
+                    price_min: "{{ product.price_min }}",
+                    price_max: "{{ product.price_max }}",
+                    price_varies: "{{ product.price_varies }}",
+                    compare_at_price: "{{ product.compare_at_price }}",
+                    compare_at_price_min: "{{ product.compare_at_price_min }}",
+                    compare_at_price_max: "{{ product.compare_at_price_max }}",
+                    compare_at_price_varies: "{{ product.compare_at_price_varies }}",
+                    {% for field in product.metafields.discoapp %}
+                        {{ field | first }}: "{{ field | last }}"
+                        {% unless forloop.last %},{% endunless %}
+                    {% endfor %}
+                };
+              
+            {% endif %}
+        {% endfor %}
+      {% endpaginate %}
+    {% else %}
+        {% unless collection_products %}
+          {% assign collection_products = collection.products %}
+        {% endunless %}
+        {% for product in collection_products %}
+            {% if product.metafields.discoapp.SaleEndsAt or product.metafields.discoapp.SaleId %}
+              
+                window.pe_disco.collectionProducts["{{product.handle}}"] = {
+                    handle: "{{ product.handle }}",
+                    price: "{{ product.price }}",
+                    price_min: "{{ product.price_min }}",
+                    price_max: "{{ product.price_max }}",
+                    price_varies: "{{ product.price_varies }}",
+                    compare_at_price: "{{ product.compare_at_price }}",
+                    compare_at_price_min: "{{ product.compare_at_price_min }}",
+                    compare_at_price_max: "{{ product.compare_at_price_max }}",
+                    compare_at_price_varies: "{{ product.compare_at_price_varies }}",
+                    {% for field in product.metafields.discoapp %}
+                        {{ field | first }}: "{{ field | last }}"
+                        {% unless forloop.last %},{% endunless %}
+                    {% endfor %}
+                };
+    
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+  {% endif %}
+
+</script>
